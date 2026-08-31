@@ -26,9 +26,10 @@ body{
     linear-gradient(180deg,#f7f9fc 0%,#eef3f8 100%);
   line-height:1.8;
   letter-spacing:.01em;
+  font-size:16px;
 }
 .hero{
-  padding:64px 24px 46px;
+  padding:56px 24px 34px;
 }
 .hero-inner{
   width:min(1080px,100%);
@@ -92,15 +93,15 @@ h1{
 }
 .resume{
   width:min(1080px,calc(100% - 48px));
-  margin:0 auto 72px;
+  margin:0 auto 64px;
   display:grid;
-  gap:22px;
+  gap:18px;
 }
 .section{
   background:var(--paper);
   border:1px solid rgba(219,228,238,.95);
   border-radius:20px;
-  padding:30px 34px 32px;
+  padding:28px 32px 30px;
   box-shadow:var(--shadow);
 }
 h2{
@@ -201,8 +202,8 @@ h3{
 }
 
 @media (max-width:760px){
-  .hero{padding:24px 14px 30px}
-  .hero-inner{padding:34px 26px;border-radius:20px}
+  .hero{padding:20px 12px 24px}
+  .hero-inner{padding:30px 22px;border-radius:18px}
   .contact-grid{grid-template-columns:1fr}
   .resume{width:min(100% - 28px,1080px);gap:16px}
   .section{padding:24px 20px;border-radius:16px}
@@ -210,10 +211,10 @@ h3{
 }
 @media print{
   body{background:white}
-  .hero{padding:0 0 18px}
+  .hero{padding:0 0 14px}
   .hero-inner{box-shadow:none;border-radius:0}
   .resume{width:100%;margin:0;display:block}
-  .section{box-shadow:none;border:0;border-radius:0;padding:14px 0;break-inside:avoid}
+  .section{box-shadow:none;border:0;border-radius:0;padding:12px 0;break-inside:avoid}
   .entries li:hover{background:transparent}
 }
 </style>
