@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>謝怡娟老師 (Dr. Yi-Chuan Hsieh) </title>
+<style>
+:root{
+  --ink:#17233a;
+  --muted:#5f6b7a;
+  --paper:#ffffff;
+  --wash:#f3f7fb;
+  --line:#dbe4ee;
+  --accent:#315f8f;
+  --accent-soft:#eaf1f8;
+  --shadow:0 16px 40px rgba(34,55,80,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC","Segoe UI",Arial,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(49,95,143,.10), transparent 28rem),
+    linear-gradient(180deg,#f7f9fc 0%,#eef3f8 100%);
+  line-height:1.8;
+  letter-spacing:.01em;
+}
+.hero{
+  padding:64px 24px 46px;
+}
+.hero-inner{
+  width:min(1080px,100%);
+  margin:auto;
+  background:linear-gradient(135deg,#173653 0%,#315f8f 68%,#416f9d 100%);
+  color:white;
+  border-radius:28px;
+  padding:48px 52px;
+  box-shadow:0 24px 55px rgba(23,54,83,.22);
+  position:relative;
+  overflow:hidden;
+}
+.hero-inner::after{
+  content:"";
+  position:absolute;
+  right:-90px;
+  top:-110px;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 0 0 38px rgba(255,255,255,.05),0 0 0 78px rgba(255,255,255,.03);
+}
+.eyebrow{
+  font-size:.92rem;
+  font-weight:700;
+  letter-spacing:.16em;
+  opacity:.82;
+  margin-bottom:12px;
+}
+h1{
+  margin:0;
+  font-size:clamp(2rem,4.2vw,3.35rem);
+  line-height:1.18;
+  letter-spacing:.02em;
+  position:relative;
+  z-index:1;
+}
+.role{
+  margin:14px 0 26px;
+  font-size:1.12rem;
+  font-weight:600;
+  opacity:.92;
+  position:relative;
+  z-index:1;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  position:relative;
+  z-index:1;
+}
+.contact-item{
+  padding:11px 14px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);
+  border-radius:12px;
+  font-size:.94rem;
+  overflow-wrap:anywhere;
+}
+.resume{
+  width:min(1080px,calc(100% - 48px));
+  margin:0 auto 72px;
+  display:grid;
+  gap:22px;
+}
+.section{
+  background:var(--paper);
+  border:1px solid rgba(219,228,238,.95);
+  border-radius:20px;
+  padding:30px 34px 32px;
+  box-shadow:var(--shadow);
+}
+h2{
+  margin:0 0 20px;
+  color:var(--accent);
+  font-size:1.42rem;
+  line-height:1.3;
+  padding-bottom:13px;
+  border-bottom:2px solid var(--accent-soft);
+  position:relative;
+}
+h2::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-2px;
+  width:74px;
+  height:2px;
+  background:var(--accent);
+}
+h3{
+  margin:26px 0 12px;
+  font-size:1.05rem;
+  color:#244d74;
+  background:var(--accent-soft);
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:9px;
+}
+.entries{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:10px;
+}
+.entries li{
+  position:relative;
+  padding:10px 12px 10px 22px;
+  border-radius:10px;
+  overflow-wrap:anywhere;
+}
+.entries li::before{
+  content:"";
+  position:absolute;
+  left:6px;
+  top:1.02em;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#6d8dab;
+}
+.entries li:hover{
+  background:#f7fafc;
+}
+.plain{
+  margin:8px 0 0;
+  overflow-wrap:anywhere;
+}
+.section > .plain + .plain{
+  margin-top:4px;
+}
+
+.education-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+.education-card{
+  position:relative;
+  padding:20px 22px 20px 26px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:linear-gradient(135deg,#ffffff 0%,#f8fbfe 100%);
+  box-shadow:0 7px 18px rgba(34,55,80,.055);
+  overflow:hidden;
+}
+.education-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:5px;
+  background:var(--accent);
+}
+.education-school{
+  color:#244d74;
+  font-size:1.06rem;
+  font-weight:700;
+  line-height:1.55;
+}
+.education-degree{
+  margin-top:7px;
+  color:var(--ink);
+  font-size:.98rem;
+  line-height:1.7;
+}
+
+@media (max-width:760px){
+  .hero{padding:24px 14px 30px}
+  .hero-inner{padding:34px 26px;border-radius:20px}
+  .contact-grid{grid-template-columns:1fr}
+  .resume{width:min(100% - 28px,1080px);gap:16px}
+  .section{padding:24px 20px;border-radius:16px}
+  body{line-height:1.72}
+}
+@media print{
+  body{background:white}
+  .hero{padding:0 0 18px}
+  .hero-inner{box-shadow:none;border-radius:0}
+  .resume{width:100%;margin:0;display:block}
+  .section{box-shadow:none;border:0;border-radius:0;padding:14px 0;break-inside:avoid}
+  .entries li:hover{background:transparent}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">個人資料</div>
+    <h1>謝怡娟老師 (Dr. Yi-Chuan Hsieh) </h1>
+    <p class="role">通識教育中心助理教授兼通識教育中心秘書</p>
+    <div class="contact-grid">
+      <div class="contact-item">Office: 行政大樓 A707</div>
+      <div class="contact-item">E-mail: ychsieh@uch.edu.tw</div>
+      <div class="contact-item">Phone: 03-4581196 分機 7903 </div>
+    </div>
+  </div>
+</header>
+<main class="resume">
+<section class="section"><h2>學歷：</h2><div class="education-grid">
+  <article class="education-card">
+    <div class="education-school">美國德州州立農工大學卡城分校 (Texas A&amp;M University, College Station) </div>
+    <div class="education-degree">教育心理學系哲學博士 (Ph.D.)（專攻教育科技）</div>
+  </article>
+  <article class="education-card">
+    <div class="education-school">美國密西根大學安那堡分校 (University of Michigan, Ann Arbor)</div>
+    <div class="education-degree">圖書館學與資訊科學碩士 (M.S.)</div>
+  </article>
+  <article class="education-card">
+    <div class="education-school">國立台灣大學 (National Taiwan University) </div>
+    <div class="education-degree">圖書館學系 (現今之圖書資訊學系) 文學士 (B.A.) (法律系輔系) </div>
+  </article>
+</div></section><section class="section"><h2>授課專長：</h2><p class="plain">財經英文、職場英文、飯店英語、商用英文會話、商用英文寫作、電腦輔助英語教學、資訊科技英文、餐飲英文、 領隊導遊英語等專業英文課程</p></section><section class="section"><h2>經歷：</h2><ul class="entries"><li>2023.09.01－迄今 (present) 健行科技大學通識教育中心專任助理教授</li><li>2003.08.01－2023.08.31 健行科技大學應用外語系專任助理教授</li><li>2010.08.01－2011.01.31 台北大學國際財務金融碩士在職專班兼任助理教授</li><li>2007.08.01－2008.07.31 中原大學應用外語系研究所兼任助理教授</li><li>2003.01－2003.05 美國德州州立農工大學卡城分校教育心理學系研究助理</li><li>2000.12－2001.05 美國德州州立農工大學華人學校中文教師</li><li>2000.06－2000.08 美國德州州立農工大學卡城分校認知及教育科技研究室 (Cognitive and Instructional Technologies Laboratories) 研究助理</li><li>1999.09－2000.05 美國德州州立農工大學卡城分校教育心理學系研究助理</li><li>1998.09－1998.12 美國密西根大學安那堡分校人口研究中心 (Population Studies Center)助理圖書館員</li><li>1996. 12－1997.06 國立政治大學中正圖書館採訪組組員 </li></ul></section><section class="section"><h2>榮譽獎項：</h2><ul class="entries"><li>2025年華人資訊語文競技與創意設計大賞-專業英日文(ESP)詞彙與聽寫說能力推廣貢獻獎</li></ul><ul class="entries"><li>114學年度 第1學期 健行科技大學教師製作數位教材競賽佳作</li><li>114學年度 第1學期 健行科技大學教師開放性線上課程類競賽甲等</li><li>113學年度 第2學期 健行科技大學教師開放性線上課程類競賽佳作</li><li>2024年 華人資訊語文競技與創意設計大賞專業英文詞彙能力國際認證教學卓越獎</li><li>113學年度 第1學期 健行科技大學進修部資工系一甲二甲優良導師</li><li>113學年度 第1學期 健行科技大學教師開放性線上課程類競賽甲等</li><li>112學年度 第2學期 健行科技大學教師開放性線上課程類競賽佳作</li><li>2023年 華人資訊語文競技與創意設計大賞專業英文詞彙能力國際認證教學卓越獎</li><li>111學年度 第2學期健行科技大學教師製作數位教材類競賽佳作	</li><li>111學年度 第1學期優良導師 (日四技應外系四乙)	</li><li>111學年度 第2學期優良導師 (日四技應外系四乙)	</li><li>2023年 華人資訊語文競技與創意設計大賞專業英日文(ESP)詞彙與聽寫能力推廣貢獻獎</li><li>2022年 華人資訊語文競技與創意設計大賞專業英文詞彙能力國際認證教學卓越獎</li><li>2021年 華人資訊語文競技與創意設計大賞專業英文詞彙能力推廣貢獻獎</li><li>2021年 應外系專題競賽團體組第一名指導老師</li><li>2020年 華人資訊語文競技與創意設計大賞: 專業英文詞彙能力國際認證教學卓越獎(商業與管理)</li><li>2020年 華人資訊語文競技與創意設計大賞: 專業英文詞彙能力國際認證教學卓越獎 (觀光旅運)	</li><li>2020年 華人資訊語文競技與創意設計大賞: 專業英日文詞彙與聽力能力推廣貢獻獎</li><li>2019年  (第八屆)專業英(日)文詞彙與聽力能力大賽」全國賽北二區賽指導王韻茹等2位同學參加商業與管理項目榮獲大學(專)院校--專業英文詞彙組季軍等個人獎項</li><li>107 學年度第一學期應外一甲優良導師獎</li><li>2018年 華人資訊語文競技與創意設計大賞專業英日文詞彙與聽力能力推廣貢獻獎	</li><li>2018年 中華民國私立教育事業協會大勇獎</li><li>2017年 榮獲105學年度應用外語系教師教學優良「化雨獎」</li><li>2017年 華人資訊語文競技與創意設計大賞英日文詞彙與聽力能力大賽台灣全國賽北二區賽指導戴偉珍等2位同學參賽榮獲季軍等個人獎項</li><li>2017年 應用外語系105學年度專題競賽佳作組指導老師</li><li>2017年 應用外語系105學年度第一學期優良老師</li><li>2015年 華文資訊語文競技與創意設計大賞專業英文詞彙能力國際認證教學卓越成就獎</li><li>2015年 103年度第二學期日四技應外系三年甲班優良導師獎</li><li>2015年 102 年度第二學期應用外語系教師教學優良「化雨獎」</li><li>2014年 指導學生參加「2014專業英文詞彙能力大賽」競賽活動，表現傑出獲得「教學卓越獎」佳績</li><li>2013年 101 年度第一學期應外系數位教材編纂佳作</li><li>2012年 100 年度第一學期應外系數位教材製作競賽獲獎</li><li>2009年 97年度第二學期應用外語系教師教學優良「化雨獎」</li></ul></section><section class="section"><h2>專業服務：</h2><ul class="entries"><li>曾任中壢家商應用英語科協同教學專題製作指導教師</li><li>曾任師範大學林口校區僑生先修部提升教職員英文課程授課老師</li><li>曾任健行科大推廣教育中心產業人才投資計畫旅遊英語課程授課老師</li><li>曾任健行科大推廣教育中心產業人才投資計畫商務英文會話課程授課老師</li><li>曾任健行科大推廣教育中心多益初級班授課老師</li><li>曾任健行科大推廣教育中心多益中級班授課老師</li><li>曾任健行科大應用外語系日間部四技學生專題指導教師</li><li>曾任健行科大應用外語系四技商管類入學甄選評分委員</li><li>曾任淡江大學課程與教學研究所碩士論文口試委員</li><li>曾任中原大學應用外語系碩士班論文口試委員</li></ul></section><section class="section"><h2>證照取得</h2><h3>國家級</h3><ul class="entries"><li>考試院 圖書博物管理職系圖書資訊管理科-高考三級及格 (85)全高字第273號</li><li>考試院 外語導遊人員 (英語) 及格 (101)專普導字第013668號</li><li>考試院 外語領隊人員 (英語) 及格 (101)專普領字第012358號</li><li>經濟部國際貿易局 會議展覽專業人員初階認證及格 貿展字第09902507890號</li><li>教育部台語語言能力認證考試 中級 (B1) 及格 </li></ul><h3>英語證照</h3><ul class="entries"><li>LCCI (倫敦商會考試局) Certificate First Certificate for Teachers of Business English</li><li>World Professional Certification Institute Professional English for Business Communication</li><li>World Professional Certification Institute Professional English for Hospitality Industry</li><li>World Professional Certification Institute Professional English for Logistics</li><li>World Professional Certification Institute Professional English for MICE Industry</li><li>Cambridge English Language Assessment Teaching Knowledge Test (TKT) Module 1 Band 3</li><li>Global Learning &amp; Assessment Development Professional Vocabulary Quotient Credential (PVQC) in Business and Management (商業與管理類) Expert </li><li>Global Learning &amp; Assessment Development Professional Vocabulary Quotient Credential (PVQC) in Artificial Intelligence (人工智慧) Expert  </li><li>Global Learning &amp; Assessment Development Professional Vocabulary Quotient Credential (PVQC) in Culinary (餐飲) Specialist </li><li>Global Learning &amp; Assessment Development Professional Vocabulary Quotient Credential (PVQC) in e-Sports (電競類) Specialist </li><li>Global Learning &amp; Assessment Development Professional Vocabulary Quotient Credential (PVQC) in ICT (計算機) Specialist </li><li>Global Learning &amp; Assessment Development Professional Vocabulary Quotient Credential (PVQC) in Hospitality &amp; Tourism (觀光旅運類) Specialist </li><li>Global Learning &amp; Assessment Development Professional Vocabulary Quotient Credential (PVQC) in Education (教育) Specialist </li><li>Global Learning &amp; Assessment Development Professional Vocabulary Quotient Credential (PVQC) in Cosmetics and Beauty (彩妝美容) Expert  </li><li>智富全球管理顧問有限公司 商務英文管理師BEM 甲級</li><li>智富全球管理顧問有限公司 科技英文管理師TEM 甲級</li></ul><h3>商業類</h3><ul class="entries"><li>中華民國人壽保險商業同業公會 人身保險業務員資格測驗合格證書 (110) 人身保業測(3)字第02658號</li><li>中華民國人壽保險商業同業公會 人身保險業務員銷售外幣收付非投資型保險商品測驗合格證書 (110) 人身傳統外幣測字第110F008583號</li><li>三星統計服務有限公司 調查與研究方法分析師種子教師證</li><li>中華民國全國商業總會 BMC商業管理職能認證系統--CRMS證照課程種子講師合格證書</li><li>中華民國應用商業管理協會 AI 教學工具應用師</li><li>中華民國應用商業管理協會 AI 教學工具管理師</li><li>中華民國應用商業管理協會  PMBC 醫學美容諮詢師</li><li>中華民國應用商業管理協會 SCTP 銀髮族遊程規劃師 </li><li>中華民國應用商業管理協會 SRMP 溫泉會館行銷企劃師</li><li>中華民國應用商業管理協會 TFMP 觀光工廠行銷規畫師</li><li>中華民國應用商業管理協會 TPMP主題樂園行銷企劃師</li><li>中華民國應用商業管理協會 MITP 微電影導入教學企劃師</li><li>中華民國應用商業管理協會 OODA O2O 經營數據分析師</li><li>中華民國應用商業管理協會 MITM 微電影導入教學管理師</li><li>中華民國應用商業管理協會 OODM O2O經營數據管理師</li><li>中華民國應用商業管理協會 MPCC文創品牌行銷企劃師</li><li>中華民國應用商業管理協會 FCMP 健身俱樂部行銷企劃師</li><li>中華民國應用商業管理協會 HRMP 休閒渡假村行銷企劃師</li><li>中華民國應用商業管理協會 LFMP 休閒農場行銷規畫師</li><li>中華民國應用商業管理協會 LMCC文創品牌授權經理</li><li>中華民國應用商業管理協會 CTTP 文化主題遊程規劃師</li><li>中華民國應用商業管理協會 CTMM 創意思考技法管理師</li><li>中華民國應用商業管理協會 CTMA 創意思考技法應用師</li><li>中華民國應用商業管理協會 PDPM 產品開發專案管理師</li><li>中華民國應用商業管理協會 PDPA 產品開發專案分析師</li><li>矩陣管理顧問有限公司 整合行銷管理師</li><li>矩陣管理顧問有限公司 網路與社群行銷管理師</li><li>智富全球管理顧問有限公司 觀光行銷管理師TMKTM 甲級</li><li>智富全球管理顧問有限公司 觀光顧客關係管理師TCRMM 甲級</li><li>智富全球管理顧問有限公司 觀光餐旅英文管理師THEM 甲級</li><li>智富全球管理顧問有限公司 會議展覽管理師CEMM 甲級</li><li>智富全球管理顧問有限公司 文創產業經營管理師CCIMM 甲級</li></ul><h3>華語教學類</h3><ul class="entries"><li>美國全球漢語教學總會TCSOL 美國全球漢語教學總會TCSOL (Teachers of Chinese to Speakers for Other Languages) 對外漢語教師資格證書</li><li>英國國際教育集團TCFL 英國國際教育集團TCFL (Teaching Chinese as a Foreign Language) 對外漢語教師資格證書</li><li>全球漢語教學總會 國際漢語教師資格證書 TCBP-180915-0443</li></ul><h3>航空類</h3><p class="plain">台灣航空教育發展協會 國際航空客運票務認證書 國航證中字第B104080726號</p><h3>園藝類</h3><p class="plain">Association of Chinese Professional Training and Development 中華國際人才培訓與發展協會 Certified Horticultural Therapist 園藝治療師</p><h3>ESG類</h3><p class="plain">社團法人台灣產業永續發展協會   ESG初階管理師</p><h3>健康管理類</h3><p class="plain">臺灣健康管理學會  初階健康管理師</p></section><section class="section"><h2>論文論著</h2><p class="plain">Hsieh, Y.C. (May, 2003). A Cross-Cultural Study on the Effect of the Use of</p><p class="plain">Student-Generated Visualization as a Study Strategy for Middle School Science Concept Learning. Unpublished doctoral dissertation completed at the Texas A&amp;M University, College Station, USA. </p></section><section class="section"><h2>期刊論著</h2><ul class="entries"><li>Yi-Hsuan Lee, Yi-Chuan Hsieh, Yen-Hsun Chen (2013), &quot; An investigation of employees&#x27; use of e-learning systems: applying the technology acceptance model, Behaviour &amp; Information Technology 32(2), pp.173-189, (SSCI).</li><li>Yi-Hsuan Lee, Yi-Chuan Hsieh, Chia-Ning Hsu (2011), &quot;Adding innovation diffusion theory to the technology acceptance model: Supporting employees’ intentions to use e-learning&quot;, Journal of Educational Technology &amp; Society, 14(4), pp.124–137, (SSCI).</li></ul><p class="plain">Yi-Hsuan Lee, Yi-Chuan Hsieh, Chun-Yuan Ma (2010), &quot;A model of organizational employees’ e-learning systems acceptance&quot;, Knowledge-based systems, 24(3), pp.355-366, (SCI).</p><ul class="entries"><li>Hsieh, Y. C., &amp; Chen, W. T. (2011, 05). 多媒體註記系統對台灣大學生英語單字學習之影響 (The Effects of Multimedia Annotations on Taiwanese EFL Learners’ Vocabulary Learning). 高雄應用科技大學學報 40, 45-72.</li><li>Hsieh, Y. C., &amp; Chang, Y. C. &amp; Hsu, W. C. (2010, 09). 跨文化視訊會議融入台灣大學生學習之探究 (The Investigation of the Use of Videoconferencing to Facilitate Taiwanese EFL Students’ Language Learning), 清雲學報30 (2), 131-148.</li><li>Hsieh, Y. C., &amp; Liu, C. N. (2006, 09). 國際網路傳輸語用教學對台灣大學生語用能力發展之影響 (The Development of Taiwanese EFL Learners’ Pragmatic Competence through International Telecommunication), 清雲學報26 (2), 159-174.</li><li>Hsieh, Y. C., &amp; Cifuentes, L. (2006, 08). Student-Generated Visualization as a Study Strategy for Science Concept Learning. Journal of Educational Technology and Society, 9 (3),137-148. (SSCI Indexed Journal)</li><li>Nguyen, D. M., &amp; Hsieh, Y. C., Allen, G. D. (2006, 06). The Impact of the Web-Based Assessment and Practice on Students’ Mathematics Learning Attitudes. Journal of Computers in Mathematics and Science Teaching 25 (3), 251-279.</li><li>Cifuentes, L., &amp; Hsieh, Y. C. (2004, 09). Visualization for Construction of Meaning during Study Time: A Qualitative Analysis. International Journal of Instructional Media, 30 (4),407-417.</li><li>Cifuentes, L., &amp; Hsieh, Y. C. (2004, 06). Visualization for Construction of Meaning during Study Time: A Quantitative Analysis. International Journal of Instructional Media, 30 (3),263-273.</li><li>謝怡娟 (2004, 03). 學習者自我建構圖像之學習策略—探究概念構圖對學習的影響，清雲學報, 24 (1), p.269-276</li><li>Cifuentes, L., &amp; Hsieh, Y. C. (2004, 03). Visualization for middle school students&#x27; engagement in science learning. Journal of Computers in Mathematics and Science Teaching, 23(2), 109-137.</li></ul></section><section class="section"><h2>研討會論著</h2><ul class="entries"><li>Hsieh, Y. C., &amp; Tsai, C.Y. (2014, April 2-4). The Construction of Content Validity Index for Mobile Instructional Design: Taking English for Information Technology for an example, e-CASE &amp; e-Tech 2014 Conference Management System, Nagoya University, Japan, pp.910-911.</li><li>Hsieh, Y. C., &amp; Tsai, C.Y. (2014, April 2-4). The Construction of Content Validity Index for Mobile Instructional Design: Taking English for Information Technology for an example, e-CASE &amp; e-Tech 2014 Conference Management System, Nagoya University, Japan, pp.912-913.</li><li>Hsieh, Y. C., &amp; Tsai, C.Y. (2013, April 3-5). A Study of the Secondary School Pre-service Teachers’ Integration of Multimedia into the 7th grades’ English Vocabulary Teaching. In Proceedings of International Conference on e-Commerce, e-Administration, e-Society, e-Education, and e-Technology, Kitakyushu, Japan, pp.1035-1046.</li><li>Lee, Y.H., Shiue, Y.C., Hsieh, Y. C., &amp; Chang, S. C. (2010. Jan. 25-27). A Study of e-learning resources integration in Taiwanese public sectors from the content, system and technological perspectives. In Proceedings of the international conference on E-Commerce, E-Administration, E-Society, and E-Education (E-CASE) and E-Technology, Grand Lisboa, Macau, pp.965-967.</li><li>Lee, Y. H., Hsieh, Y.C. &amp; Cai, S. J. (2009, October 21). A Case Study of the Human Resource Development and Organizational Performances for the Taiwan High-Tech Industry—Hsin Chu Science-Based Industrial Park as an example”, A selected paper in the 2009International Human Resource Development Conference (2009 IHRD), Taipei, Taiwan Proceedings, pp. 317-329. (ISSN: 2072-926X)</li><li>Hsieh, Y. C., Lee, Y. H., &amp; Lo, W. C. (2009, October 21). The effects of the employees’ job satisfaction, the manager’s leadership style, employees’ job characteristics, and employees’ personality traits on employee’s turnover intention: a case study of the Taiwanese employees in the four super-large accounting firms, A selected paper in the 2009 International Human Resource Development Conference (2009 IHRD), Taipei, Taiwan Proceedings, pp.55-67. (ISSN: 2072-926X)</li><li>Hsieh, Y. C., Lee, Y. H., Shiue, Y.C., &amp; Lin, C. C. (2009. Jan.10). The Investigation and Analysis of Operational Strategies of Digital Opportunity Centers in Taiwan. In Proceedings of the international conference on E-Commerce, E-Administration, E-Society, and E-Education(E-CASE) and E-Technology, Singapore, pp.1448-1458.</li><li>Lee, Y. H., Hsieh, Y. C., Shiue, Y.C., &amp; Wu, W. R. (2009. Jan. 10). Analysis of environment and business model for E-learning Industry in Taiwan. In Proceedings of the international conference on E-Commerce, E-Administration, E-Society, and E-Education (E-CASE) and E-Technology, Singapore, pp.1436-1447.</li><li>Hsieh, Y.C., Chang, Y.C., &amp; Hsu, W.C. (2007. 10). Collaborative language learning between Taiwanese students and Americans through videoconferencing activities. A selected paper presented at the E-Learn 2007 World Conference on E-Learning in Corporate, Government, Healthcare, &amp; Higher Education, Quebec City Convention Centre, Quebec City, Canada, Proceedings of E-Learn 2007, pp. 6029-6034.</li><li>Liu, C.N., Hsieh, Y.C., Eslami-Rasekh, Z., Cifuentes, L. (2006, 10). Learning “pragmatics “on-line through partnership: A cross-cultural study between Taiwanese college students and their Texan tutors. A selected paper presented at the 2006 Annual Convention of the Association of Educational Communications and Technology 2006 annual proceedings, Dallas: volume #1, Texas, USA.</li><li>Liu, C. N., &amp; Hsieh, Y. C. (2005, 10). Learning “pragmatics” on-line through partnership: A cross-cultural study between Taiwanese college students and their Texan tutors. A Selected Paper Presented at the 2005 Annual Convention of the Association of Educational Communications and Technology (28th AECT annual proceedings), Orlando, Florida, USA, pp.328-335.</li><li>Hsieh, Y. C., &amp; Cifuentes, L. (2005, 10). A cross-media and cross-cultural study on the effect of student-generated visualization as a study strategy. A Selected Paper Presented at the2005 Annual Convention of the Association of Educational Communications and Technology (28th AECT annual proceedings), Orlando, Florida, USA, pp. 166-171.</li><li>Hsieh, Y. C., &amp; Liu, C. N. (2005, 09/24). Learning “Pragmatics” On-Line: The Role of Pedagogical Intervention in the Development of Foreign Language Pragmatic Competence. Paper Presented for the College of Commerce International Conference at Ching Yun University, Taiwan. (清雲科技大學第一屆全國商學研討會）</li><li>Hsieh, Y.C. &amp; Cifuentes, L. (2003). A Cross-Cultural Study on the Effect of the Use of Student-Generated Visualization As A Study Strategy For Middle School Science Concept Learning. A paper presented at the Annual Meeting of the Educational Research Exchange Conference, College Station, Texas, USA.</li><li>Hsieh, Y. C., &amp; Cifuentes, L. (2003, 03). The Effect of the Use of Student-Generated Visualization As A Study Strategy for Middle School Science Concept Learning. A paper for the 2003 Society for Information Technology and Teacher Education (SITE) International Conference, Albuquerque, New Mexico.</li></ul></section><section class="section"><h2>計劃執行:</h2><ul class="entries"><li>2014.02.17－2014.06.17 財務金融專業英文翻譯諮詢 (台灣全農興業股份有限公司辦理產學合作) </li><li>2010.04－2011.01.31 教育部99年數位學伴線上課業輔導服務計畫</li><li>2009.08.01－2010.07.31 國科會計畫 NSC 98-2410-H-231-011 多媒體註記功能對台灣大學生英語單字學習的影響</li><li>2006.11.24 翻譯內政部營建署東沙文史資料手冊完整版與精簡版（中翻英）</li><li>2006.12.08－2007.04.18 內政部營建署東沙海洋國家公園研究計畫數位化教育推廣案</li></ul></section><section class="section"><h2>專利: </h2><p class="plain">教學裝置,  M450028, 新型專利, 國內已核准, 第一作者, 申請日期2012/10/25, 啟用日期2013/04/01, 終止日期2022/10/24	, 發照單位經濟部智慧財產局</p></section></main>
+</body>
+</html>
